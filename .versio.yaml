@@ -1,0 +1,26 @@
+options:
+  prev_tag: "versio-prev"
+
+projects:
+  - name: "app"
+    root: "app"
+    id: 1
+    tag_prefix: "app"
+    labels: go
+    version:
+      tags:
+        default: "0.0.0"
+    subs: {}
+
+  - name: "test"
+    root: "test"
+    id: 2
+    tag_prefix: "test"
+    labels: npm
+    version:
+      file: "package.json"
+      json: "version"
+
+sizes:
+  use_angular: true
+  fail: ["*"]
